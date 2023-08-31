@@ -9,8 +9,18 @@ const userWord = prompt ('inserisci una parola')
 
 //Divido la parola in un array 
 let array = userWord.split('')
-console.log(array)
+
 
 //Inverto l'array 
 array = array.reverse()
-console.log(array)
+
+
+//Trasformo di nuovo l'array invertito in stringa
+const revertedWord = array.join('')
+
+//Comparo la parola inserita 
+if (userWord == revertedWord) {
+    console.log('la parola è palindroma')
+} else {
+    console.log(userWord)
+}
