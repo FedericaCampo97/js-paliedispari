@@ -56,3 +56,5 @@ if (userChoose == 'pari' && divisibile == 0) {
 
 
 
+
+
