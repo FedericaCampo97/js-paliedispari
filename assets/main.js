@@ -23,7 +23,7 @@ userNumber = parseInt(userNumber)
 //creo una funzione per generare un numero random
 function randomNumberPC() {
     let number = Math.floor(Math.random() * 5) + 1;
-    console.log(number)
+    console.log('numero del computer ' + number)
     return number
     
 }
@@ -31,7 +31,7 @@ let numberPC = randomNumberPC()
 
 //sommo i due numeri
 let somma = userNumber + numberPC
-console.log(somma)
+console.log('somma dei due numeri ' + somma)
 
 //stabilisco se la somma dei numeri è pari o dispari
 function comparison(somma) {
@@ -42,7 +42,16 @@ function comparison(somma) {
 }
 let resultComparison = comparison()
 
+//Dichiaro chi vince 
+let divisibile = somma % 2
 
+if (userChoose == 'pari' && divisibile == 0) {
+    console.log('hai vinto')
+} else if (userChoose == 'dispari' && divisibile == 1) {
+    console.log('hai vinto')
+} else {
+    console.log('hai perso')
+}
 
 
 
