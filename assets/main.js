@@ -15,10 +15,35 @@ Dichiariamo chi ha vinto.*/
 const userChoose = prompt ('scegli pari o dispari');
 
 //Chiedo all'utente di inserire un numero da 1 a 5
-const userNumber = prompt ('Scegli un numero da 1 a 5');
+let userNumber = prompt ('Scegli un numero da 1 a 5');
 
-function randomNumber () {
+//Trasformo numero una stringa 
+userNumber = parseInt(userNumber)
+
+//creo una funzione per generare un numero random
+function randomNumberPC() {
     let number = Math.floor(Math.random() * 5) + 1;
+    console.log(number)
     return number
+    
 }
-let randomNumber = randomNumber()
+let numberPC = randomNumberPC()
+
+//sommo i due numeri
+let somma = userNumber + numberPC
+console.log(somma)
+
+//stabilisco se la somma dei numeri è pari o dispari
+function comparison(somma) {
+    if (somma % 2) {
+        return true
+    } 
+    return false
+}
+let resultComparison = comparison()
+
+
+
+
+
+
